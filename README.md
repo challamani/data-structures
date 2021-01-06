@@ -3,36 +3,35 @@
 
 ## Sorting
 
-1. Selection Sort
-2. Bubble Sort
-3. Recursive Bubble Sort
-4. Insertion Sort
-5. Recursive Insertion Sort
-6. Merge Sort
-7. Iterative Merge Sort
-8. Quick Sort
-9. Iterative Quick Sort
-10. Heap Sort
-11. Counting Sort
-12. Radix Sort
-13. Bucket Sort
+1. Selection
+2. Bubble
+3. Recursive Bubble
+4. Insertion
+5. Recursive Insertion
+6. Merge
+7. Iterative Merge
+8. Quick
+9. Iterative Quick
+10. Heap
+11. Counting
+12. Radix
+13. Bucket
 14. ShellSort
 15. TimSort
 16. Comb Sort
-17. Pigeonhole Sort
+17. Pigeonhole
 18. Cycle Sort
 19. Cocktail Sort
-20. Strand Sort
-
-21. Bitonic Sort
-22. Pancake sorting
-23. Binary Insertion Sort
-24. BogoSort or Permutation Sort
-25. Gnome Sort
-26. Sleep Sort – The King of Laziness / Sorting while Sleeping
-27. Stooge Sort
+20. Strand
+21. Bitonic
+22. Pancake
+23. Binary Insertion
+24. BogoSort or Permutation
+25. Gnome
+26. Sleep – The King of Laziness / Sorting while Sleeping
+27. Stooge
 28. Tag Sort (To get both sorted and original)
-29. Tree Sort
+29. Tree
 30. Cartesian Tree Sorting
 31. Odd-Even Sort / Brick Sort
 32. QuickSort on Singly Linked List
@@ -43,11 +42,10 @@
 37. 3-way Merge Sort
 
 ## Searching
-
-1. Linear Search
-2. Binary Search
+1. Linear
+2. Binary
 3. Jump Search
-4. Interpolation Search
+4. Interpolation 
 5. Exponential Search
 6. Sublist Search (Search a linked list in another list)
 7. Fibonacci Search
