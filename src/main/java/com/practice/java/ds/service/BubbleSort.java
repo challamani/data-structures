@@ -1,11 +1,15 @@
 package com.practice.java.ds.service;
 
+import com.google.common.collect.ImmutableMap;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @Service
+@Slf4j
 public class BubbleSort implements Sort<Integer> {
 
     @Override
@@ -24,7 +28,8 @@ public class BubbleSort implements Sort<Integer> {
     }
 
     @Override
-    public List<String> getMetadata() {
-        return Arrays.asList("Not found!");
+    public Map<String, String> getMetadata() {
+        return ImmutableMap.of("metadata","Not found!");
     }
+
 }

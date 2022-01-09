@@ -14,7 +14,7 @@ public class AlgoExecutorService {
     @Autowired
     Map<String,Sort> stringSortMap;
 
-    public Response doSorting(Request request) {
+    public Response doSorting(Request request)  {
         Response response = new Response();
         List<Integer> result = stringSortMap.get(request.getValue()).sort(request.getInput());
         response.setOutput(result);

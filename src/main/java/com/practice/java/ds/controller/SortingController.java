@@ -15,7 +15,7 @@ public class SortingController {
     AlgoExecutorService algoExecutorService;
 
     @RequestMapping(value = {"/sorting/{type}/{order}"},method = RequestMethod.POST, produces = {"application/json"})
-    public Response doSorting(@PathVariable String type , @PathVariable String order, @RequestBody Request request){
+    public Response doSorting(@PathVariable String type , @PathVariable String order, @RequestBody Request request)  {
         request.setType("sorting");
         request.setOrder(order);
         request.setValue(type);

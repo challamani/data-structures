@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 @Data
 public class BaseResponse implements Serializable {
@@ -12,7 +13,7 @@ public class BaseResponse implements Serializable {
     private List<String> messages;
     private String timeComplexity;
     private String spaceComplexity;
-    private List<String> metadata;
+    private Map<String,String> metadata;
 
     public String getStatus() {
         return status;
@@ -46,11 +47,11 @@ public class BaseResponse implements Serializable {
         this.spaceComplexity = spaceComplexity;
     }
 
-    public List<String> getMetadata() {
+    public Map<String, String> getMetadata() {
         return metadata;
     }
 
-    public void setMetadata(List<String> metadata) {
+    public void setMetadata(Map<String, String> metadata) {
         this.metadata = metadata;
     }
 
