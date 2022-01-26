@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.practice.java.ds</groupId>
-    <artifactId>spring-boot-data-structures</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>data-structures-with-java</artifactId>
+    <version>1.0</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -16,7 +16,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.2.RELEASE</version>
+        <version>2.1.5.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -75,20 +75,70 @@
         </dependency>
     </dependencies>
 
+
     <build>
         <plugins>
+            <!--
+               1. Spring-boot build-image goal
+            -->
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.1.5.RELEASE</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>2.3.0.RELEASE</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                        <goal>build-image</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+            <!--
+                2. Google cloud tools - JIB maven plugin
+             -->
+            <!--<plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <container>
+                        <creationTime>${maven.build.timestamp}</creationTime>
+                    </container>
+                    <to>
+                        <image>${project.artifactId}:${project.version}</image>
+                    </to>
+                </configuration>
                 <executions>
                     <execution>
+                        <phase>package</phase>
                         <goals>
-                            <goal>repackage</goal>
+                            <goal>dockerBuild</goal>
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
+            <!-- Spotify dockerfile-maven plugin -->
+            <!--<plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.13</version>
+                <executions>
+                    <execution>
+                        <id>default</id>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <repository>${project.artifactId}</repository>
+                    <tag>${project.version}</tag>
+                    <buildArgs>
+                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArgs>
+                </configuration>
+            </plugin>-->
         </plugins>
     </build>
 </project>

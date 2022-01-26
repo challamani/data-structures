@@ -53,3 +53,16 @@
 9. Recursive program to linearly search an element in a given array
 10. Recursive function to do substring search
 11. Unbounded Binary Search Example 
+
+```
+FROM adoptopenjdk/openjdk11:latest
+RUN addgroup --system mylearnings
+RUN adduser --system mylearnings --ingroup mylearnings
+USER mylearnings:mylearnings
+VOLUME /tmp
+ARG JAR_FILE
+ADD ${JAR_FILE}/apps/ds-with-java.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/apps/ds-with-java.jar"]
+#ENTRYPOINT["java","-Djava.security.egd=file:/dev/./urandom","-jar","/apps/ds-with-java.jar"]
+```

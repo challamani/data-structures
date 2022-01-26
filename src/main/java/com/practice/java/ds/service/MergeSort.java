@@ -39,10 +39,7 @@ public class MergeSort implements Sort<Integer> {
             mergeSort(input,minIndex,mid);
             mergeSort(input,(mid+1),maxIndex);
 
-            logInput("before",input,minIndex,maxIndex);
             mergeValues(input,minIndex,maxIndex,((minIndex+maxIndex) / 2));
-            logInput("after",input,minIndex,maxIndex);
-
         }else if(input[minIndex] > input[maxIndex]){
               int value = input[minIndex];
               input[minIndex] = input[maxIndex];
@@ -53,7 +50,6 @@ public class MergeSort implements Sort<Integer> {
     private void mergeValues(Integer[] input, int start, int end, int mid)  {
         Integer[] sortedArray = new Integer[(end-start)+1];
         try {
-            logger.info("range [{},{}] mid : [{}]", start, end, mid);
             int left=start;
             int right=(mid+1);
             int index=0;
